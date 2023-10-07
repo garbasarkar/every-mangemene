@@ -1,27 +1,31 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import swal from "sweetalert";
 
 const Login = () => {
-  const {userLogin} = useContext(AuthContext);
-  const [loginsec, setLoginSec] = useState('');
-  const handleBtnLogin = e => {
+  const { userLogin } = useContext(AuthContext);
+  const [loginsec, setLoginSec] = useState("");
+  const navigate = useNavigate();
+  const location = useLocation();
+  const handleBtnLogin = (e) => {
     e.preventDefault();
     const fromIn = new FormData(e.currentTarget);
-    const email = fromIn.get('email');
-    const password = fromIn.get('password');
+    const email = fromIn.get("email");
+    const password = fromIn.get("password");
     console.log(email, password);
 
     userLogin(email, password)
-    .then(result => {
-      console.log(result.user)
-      swal("Good job!", "Login Sucssesfull!", "success");
-    })
-    .catch(error => {
-      console.log(error)
-    })
-  }
+      .then((result) => {
+        console.log(result.user);
+        swal("Good job!", "Login Sucssesfull!", "success");
+        navigate(location?.pathname ? location.state : '/');
+        
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <div className="w-4/2">
       <div className="shadow w-[500px] p-5 rounded mx-auto mt-10 mb-10">

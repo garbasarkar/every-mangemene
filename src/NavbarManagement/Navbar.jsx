@@ -39,6 +39,23 @@ const Navbar = () => {
               Service
             </NavLink>
           </li>
+          {user && (
+            <>
+              <li>
+                <NavLink
+                  className="ml-5 text-lg font-semibold"
+                  to="/conference"
+                >
+                  Conference
+                </NavLink>
+              </li>
+              <li>
+                <NavLink className="ml-5 text-lg font-semibold" to="/meeting">
+                  Meeting
+                </NavLink>
+              </li>
+            </>
+          )}
           <li>
             <NavLink className="ml-5 text-lg font-semibold" to="/login">
               Login
