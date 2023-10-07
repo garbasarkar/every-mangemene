@@ -5,6 +5,7 @@ import Login from "../RegisterPage/Login";
 import Register from "../RegisterPage/Register";
 import ProducService from "../ServiceManagement/ProducService";
 import DetalisPro from "../ServiceManagement/DetalisPro";
+import SpecialRouter from "../AuthProvider/SpecialRouter";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/show/:id",
-        element: <DetalisPro></DetalisPro>,
+        element: <SpecialRouter><DetalisPro></DetalisPro></SpecialRouter>,
         loader: () => fetch(`/ProService.json`)
       },
       {

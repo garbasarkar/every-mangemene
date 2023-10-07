@@ -53,7 +53,7 @@ const Navbar = () => {
             onClick={userLogOut}
             className="px-6 py-2 bg-[#E91E63] rounded text-white font-semibold"
           >
-            SIGNIN
+            SIGN OUT
           </button>
         ) : (
           <button className="px-6 py-2 bg-[#E91E63] rounded text-white font-semibold">

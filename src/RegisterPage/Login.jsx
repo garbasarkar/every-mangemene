@@ -1,9 +1,11 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import swal from "sweetalert";
 
 const Login = () => {
   const {userLogin} = useContext(AuthContext);
+  const [loginsec, setLoginSec] = useState('');
   const handleBtnLogin = e => {
     e.preventDefault();
     const fromIn = new FormData(e.currentTarget);
@@ -14,6 +16,7 @@ const Login = () => {
     userLogin(email, password)
     .then(result => {
       console.log(result.user)
+      swal("Good job!", "Login Sucssesfull!", "success");
     })
     .catch(error => {
       console.log(error)
