@@ -1,0 +1,20 @@
+[
+    {
+      "id": 1,
+      "name": "Excellence Conference",
+      "short_description": "A versatile and high-quality product",
+      "image": "https://i.ibb.co/1Jbf8V9/laptops1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Robotics Symposium",
+      "short_description": "Elegant design with advanced features",
+      "image": "https://i.ibb.co/9NGLSdG/meeting2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Healthcare Innovations",
+      "short_description": "Innovative and reliable for everyday use",
+      "image": "https://i.ibb.co/hc7vjLy/conference3.jpg"
+    }
+  ]
