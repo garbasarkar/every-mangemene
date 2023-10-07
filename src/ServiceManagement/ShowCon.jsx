@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const ShowCon = ({ show }) => {
   const { name, id, image, price, description } = show;
-  console.log(show);
+  // console.log(show);
   return (
     <div className="shadow p-5 rounded-md">
       <img className="w-full h-[200px] rounded shadow" src={image} alt="" />

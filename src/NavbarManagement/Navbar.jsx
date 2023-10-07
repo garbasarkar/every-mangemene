@@ -1,8 +1,21 @@
 import { NavLink } from "react-router-dom";
 import profile from "/src/images/logo.avif";
 import logo from "/src/images/logos2.jpg";
+import { useContext } from "react";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const userLogOut = () => {
+    logOut()
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <div className=" w-10/12 mx-auto flex flex-col md:flex-row justify-between items-center">
       <NavLink to="/">
@@ -35,7 +48,18 @@ const Navbar = () => {
       </nav>
       <div className="flex mt-5 md:mt-0 gap-3 items-center mr-5">
         <img className="w-10 rounded-full" src={profile} alt="" />
-        <button>LOGIN</button>
+        {user ? (
+          <button
+            onClick={userLogOut}
+            className="px-6 py-2 bg-[#E91E63] rounded text-white font-semibold"
+          >
+            SIGNIN
+          </button>
+        ) : (
+          <button className="px-6 py-2 bg-[#E91E63] rounded text-white font-semibold">
+            LOGIN
+          </button>
+        )}
       </div>
     </div>
   );
