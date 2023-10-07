@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Tech Innovators Summit",
+    "image": "https://i.ibb.co/2nZFKL1/images.jpg",
+    "price": 29.99,
+    "description": "Join us at the Tech Innovators Summit, where industry leaders and innovators converge to discuss the latest technological trends shaping our future. Explore groundbreaking ideas, network with professionals, and gain insights into the next wave of technological advancements."
+  },
+  {
+    "id": 2,
+    "name": "Global Business Conference",
+    "image": "https://i.ibb.co/wJVqSxB/download.jpg",
+    "price": 39.99,
+    "description": "Join us at the Tech Innovators Summit, where industry leaders and innovators converge to discuss the latest technological trends shaping our future. Explore groundbreaking ideas, network with professionals, and gain insights into the next wave of technological advancements."
+  },
+  {
+    "id": 3,
+    "name": "Healthcare Innovations Forum",
+    "image": "https://i.ibb.co/BTVMGbt/download-1.jpg",
+    "price": 49.99,
+    "description": "At the Healthcare Innovations Forum, healthcare professionals and technology experts unite to explore cutting-edge innovations in the medical field. Discover transformative solutions, connect with industry experts, and contribute to the future of healthcare."
+  },
+  {
+    "id": 4,
+    "name": "Sustainable Development Summit",
+    "image": "https://i.ibb.co/gmcCvYZ/images-2.jpg",
+    "price": 19.99,
+    "description": "Join us at the Sustainable Development Summit, where leaders from various sectors come together to discuss strategies for a more sustainable future. Explore eco-friendly solutions, connect with sustainability advocates, and be part of the global movement towards positive change."
+  },
+  {
+    "id": 5,
+    "name": "AI and Robotics Symposium",
+    "image": "https://i.ibb.co/khNr0TB/download-2.jpg",
+    "price": 59.99,
+    "description": "The AI and Robotics Symposium is a gathering of experts pushing the boundaries of artificial intelligence and robotics. Engage in insightful discussions, witness live demonstrations, and explore the transformative impact of AI and robotics in diverse industries."
+  },
+  {
+    "id": 6,
+    "name": "Leadership Excellence Conference",
+    "image": "https://i.ibb.co/vYvqRVT/images-1.jpg",
+    "price": 69.99,
+    "description": "The Leadership Excellence Conference is designed for professionals aspiring to enhance their leadership skills. Join us for inspiring keynotes, interactive workshops, and networking opportunities to foster leadership excellence in your career and organization."
+  }
+]
