@@ -1,0 +1,43 @@
+[
+    {
+      "id": 1,
+      "title": "Tech Innovators Summit",
+      "image": "tech_innovators_summit.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Global Business Conference",
+      "image": "global_business_conference.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Healthcare Innovations Forum",
+      "image": "healthcare_innovations_forum.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Sustainable Development Summit",
+      "image": "sustainable_development_summit.jpg"
+    },
+    {
+      "id": 5,
+      "title": "AI and Robotics Symposium",
+      "image": "ai_robotics_symposium.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Leadership Excellence Conference",
+      "image": "leadership_excellence_conference.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Future of Work Summit",
+      "image": "future_of_work_summit.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Innovation in Education Forum",
+      "image": "innovation_in_education_forum.jpg"
+    }
+  ]
+  

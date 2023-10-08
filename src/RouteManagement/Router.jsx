@@ -6,6 +6,8 @@ import Register from "../RegisterPage/Register";
 import ProducService from "../ServiceManagement/ProducService";
 import DetalisPro from "../ServiceManagement/DetalisPro";
 import SpecialRouter from "../AuthProvider/SpecialRouter";
+import Meeting from "../PrivateRouterDesign/Meeting";
+import Conference from "../PrivateRouterDesign/Conference";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +31,15 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Register></Register>,
       },
+      {
+        path: '/meeting',
+        element: <Meeting></Meeting>,
+        loader: () => fetch(`/Meeting.json`)
+      },
+      {
+        path: '/conference',
+        element: <Conference></Conference>
+      }
     ],
   },
 ]);

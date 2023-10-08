@@ -7,32 +7,32 @@ import swal from "sweetalert";
 const Login = () => {
   const { userLogin, googleSignIn } = useContext(AuthContext);
   const [errors, setErrors] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState('');
+  const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
   const location = useLocation();
   const handleBtnLogin = (e) => {
     e.preventDefault();
-    // const errors = validate();
-    // setErrors(errors);
-    // if(Object.keys(errors).length == 0){
-    //   alert('Done!')
-    // }
+
     const fromIn = new FormData(e.currentTarget);
     const email = fromIn.get("email");
     const password = fromIn.get("password");
     console.log(email, password);
     setErrors("");
+    setPassword("");
+    if (password.length < 6) {
+      setPassword("Password should be at least 6 characters or longer!");
+      return;
+    }
     userLogin(email, password)
       .then((result) => {
         console.log(result.user);
         swal("Good job!", "Login Sucssesfull!", "success");
-        navigate(location?.pathname ? location.state : "/");
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.log(error);
-        setErrors("Please provide ma a valid input!!!");
+        setErrors("Please provide me a valid input email and password!!!");
       });
   };
   const handleGoogleSignIn = () => {
@@ -44,22 +44,6 @@ const Login = () => {
         console.log(error);
       });
   };
-  // const validate = () => {
-  //   const error = {};
-  //   if(!email){
-  //     error.email= 'Email not Matched!';
-  //   }else{
-  //     error.email = '';
-  //   }
-  //   if(!password){
-  //     error.password = 'Password is Required!';
-  //   }else if(password.length < 6){
-  //     error.password = 'Password should be at least 6 characters or longer!'
-  //   }else{
-  //     error.password = '';
-  //   }
-  //   return error;
-  // }
   return (
     <div className="w-4/2">
       <div className="shadow w-[500px] p-5 rounded mx-auto mt-10 mb-10">
@@ -69,33 +53,30 @@ const Login = () => {
         <form onSubmit={handleBtnLogin}>
           <input
             className="w-full border mt-3 mb-3 py-2 px-2 rounded"
-            // onChange={(e) => setEmail(e.target.value)}
             type="email"
             name="email"
             id="email"
             placeholder="Email"
             required
           />
-          {/* {errors.email && <h3 className="text-rose-500">{errors.email}</h3>} */}
           <br />
           <input
             className="w-full border py-2 px-2 rounded"
-            // onChange={(e) => setPassword(e.target.value)}
             type="password"
             name="password"
             id="password"
             placeholder="Your Password"
             required
           />
-          {/* {errors.password && <h3 className="text-rose-500">{errors.password}</h3>} */}
+          {password && (
+            <small className="text-red-500 font-semibold">{password}</small>
+          )}
           <input
             className="w-full border py-2 px-2 rounded mt-3 bg-[#EC5AA2] shadow text-white font-semibold"
             type="submit"
             value="Login"
           />
-          {errors && (
-            <p className="text-red-500 font-semibold text-lg">{errors}</p>
-          )}
+          {errors && <p className="text-red-500 font-semibold">{errors}</p>}
         </form>
         <div className=" flex justify-center mt-5 cursor-pointer">
           <div
