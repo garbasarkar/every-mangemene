@@ -21,7 +21,7 @@ const DetalisPro = () => {
   }, []);
   console.log(opSinData);
   return (
-    <div className="max-w-4xl mx-auto mt-10 mb-20">
+    <div className="max-w-6xl mx-auto mt-10 mb-20">
       <img
         className="w-full h-[300px] rounded shadow-md"
         src={singleData.image}

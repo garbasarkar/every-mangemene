@@ -8,6 +8,9 @@ import DetalisPro from "../ServiceManagement/DetalisPro";
 import SpecialRouter from "../AuthProvider/SpecialRouter";
 import Meeting from "../PrivateRouterDesign/Meeting";
 import Conference from "../PrivateRouterDesign/Conference";
+import ServicesPage from "../ServiceManagement/ServicesPage";
+import AboutPage from "../ServiceManagement/AboutPage";
+import HomePage from "../ServiceManagement/HomePage";
 
 const router = createBrowserRouter([
   {
@@ -19,9 +22,25 @@ const router = createBrowserRouter([
         element: <Service></Service>,
       },
       {
+        path: "/home",
+        element: <HomePage></HomePage>,
+      },
+      {
+        path: "/about",
+        element: <AboutPage></AboutPage>,
+      },
+      {
+        path: "/service",
+        element: <ServicesPage></ServicesPage>,
+      },
+      {
         path: "/show/:id",
-        element: <SpecialRouter><DetalisPro></DetalisPro></SpecialRouter>,
-        loader: () => fetch(`/ProService.json`)
+        element: (
+          <SpecialRouter>
+            <DetalisPro></DetalisPro>
+          </SpecialRouter>
+        ),
+        loader: () => fetch(`/ProService.json`),
       },
       {
         path: "/login",
@@ -32,14 +51,14 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path: '/meeting',
+        path: "/meeting",
         element: <Meeting></Meeting>,
-        loader: () => fetch(`/Meeting.json`)
+        loader: () => fetch(`/Meeting.json`),
       },
       {
-        path: '/conference',
-        element: <Conference></Conference>
-      }
+        path: "/conference",
+        element: <Conference></Conference>,
+      },
     ],
   },
 ]);

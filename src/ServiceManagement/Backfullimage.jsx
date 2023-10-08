@@ -9,7 +9,7 @@ const Backfullimage = () => {
   }, []);
 
   return (
-    <div className="mt-20 mb-20 relative opacity-60 w-full h-[500px] bg-[url('/src/images/sponser/conBk.avif')]">
+    <div className="mt-20 mb-32 relative opacity-60 max-w-6xl mx-auto h-[500px] bg-[url('/src/images/sponser/conBk.avif')]">
       <div className="flex flex-col md:flex-row justify-between items-center gap-5 px-5">
         <div data-aos="fade-right" className="flex-1">
           <h1 className="text-white text-4xl font-semibold">
