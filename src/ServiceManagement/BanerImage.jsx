@@ -13,25 +13,25 @@ const BanerImage = () => {
     Aos.init({ duration: 1000 });
   }, []);
   return (
-    <div className="baner">
+    <div className=" mt-5 md:mt-0 baner">
       <div className="flex flex-col md:flex-row justify-between items-center pt-44 px-10">
         <div data-aos="fade-left" className="text-white">
-          <h1 className="text-3xl md:text-5xl font-bold">
+          <h1 className="text-3xl text-black md:text-5xl font-bold">
             WELCOME TO <span className="text-[#E91E63]">CONSESSION</span> <br />
             CONFERENCE
-            <p className="text-[16px] mt-4">
+            <p className="hidden md:inline-flex text-[16px] mt-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
               maiores adipisci at <br /> deserunt praesentium reprehenderit
               repudiandae odio? Fugit, vitae? Pariatur delectus dicta <br />{" "}
               laborum magnam. Possimus tempore perspiciatis ullam alias
               deserunt.
             </p>
-            <button className="text-lg text-white font-semibold px-6 py-2 rounded bg-[#E91E63]">
+            <button className="hidden md:inline-flex text-lg text-white font-semibold px-6 py-2 rounded bg-[#E91E63]">
               VIEW MORE
             </button>
           </h1>
         </div>
-        <div data-aos="fade-right">
+        <div className="hidden md:inline-flex" data-aos="fade-right">
           <img className="w-[500px]" src={upImage} alt="" />
         </div>
       </div>

@@ -6,16 +6,7 @@ import { BsFillGeoAltFill, BsEnvelope } from "react-icons/bs";
 const Conversion = () => {
   return (
     <div className="max-w-6xl mx-auto mt-20">
-      {/* <h1 className=" mx-auto text-center text-3xl md:text-5xl font-semibold mb-4">
-        Welcome to Consession <br /> Conference
-      </h1>
-      <p className=" mx-auto text-center  mb-10">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
-        quas obcaecati! Libero odit a odio <br /> molestiae expedita officiis
-        sint, aut adipisci reiciendis dolorum omnis tempora similique eaque qui.
-      </p> */}
-
-      <div className="flex flex-col md:flex-row justify-between items-center">
+      <div className="flex px-4 md:-px-4 flex-col lg:flex-row justify-between gap-5 items-center">
         <div className="flex flex-col md:flex-row gap-5 flex-1">
           <div className="">
             <img className="w-60 h-72 mb-5" src={conversion3} alt="" />
@@ -23,7 +14,7 @@ const Conversion = () => {
           </div>
           <img className="w-60" src={conversion1} alt="" />
         </div>
-        <div className="flex-1">
+        <div className="flex-1 mt-10">
           <h1 className="text-center text-4xl font-semibold mt-10 md:mt-0 ">
             GET THE LATEST INFO{" "}
             <span className="text-[#E91E63]">ABOUT EVENTEN</span>
@@ -34,7 +25,7 @@ const Conversion = () => {
             ipsam dicta amet voluptatum dolore sit harum voluptatem, nobis iusto
             culpa inventore at ab fugiat?
           </p>
-          <div className="flex flex-col md:flex-row gap-5 mt-8">
+          <div className="flex px-4 md:px-0 flex-col md:flex-row gap-5 mt-8">
             <div className="flex shadow-md p-4 items-center gap-4">
               <div className=" border bg-[#E91E63] hover:bg-orange-600 h-12 p-2 rounded-full">
                 <BsFillGeoAltFill className="text-3xl  text-white"></BsFillGeoAltFill>

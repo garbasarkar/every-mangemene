@@ -19,7 +19,7 @@ const ProducService = () => {
   }, []);
   //   console.log(load, store);
   return (
-    <div className="max-w-6xl mx-auto mt-20 ">
+    <div className="max-w-6xl mx-auto px-4 md:px-0 mt-20 ">
       <div data-aos="fade-down">
         <h1 className="text-5xl font-semibold mb-2 text-[#E91E63]">
           Our Services!

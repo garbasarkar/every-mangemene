@@ -14,7 +14,7 @@ const Gelary = () => {
     Aos.init({ duration: 2000 });
   }, []);
   return (
-    <div className="max-w-6xl mb-20 mx-auto">
+    <div className="max-w-6xl px-4 px-4 mb-20 mx-auto">
       <div data-aos="fade-up">
         <h1 className="text-center text-4xl font-semibold mt-20 mb-2">
           OUR <span className="text-[#E91E63]"> GALLERY</span>

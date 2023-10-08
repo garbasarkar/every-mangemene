@@ -15,16 +15,46 @@ const Sklis = () => {
     Aos.init({ duration: 2000 });
   }, []);
 
-  const settings = {
+  var settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
-    <div data-aos="fade-up" className="max-w-6xl mx-auto mb-20 mt-20">
-      <div data-aos="fade-right">
+    <div
+      data-aos="fade-up"
+      className="max-w-6xl px-4 md:px-0 mx-auto mb-20 mt-20"
+    >
+      <div data-aos="fade-right" className="mx-4 lg:px-0">
         <h1 className="text-[#E91E63] text-4xl font-semibold mb-2">
           Skill Speaker
         </h1>
@@ -180,7 +210,7 @@ const Sklis = () => {
         </div>
       </div> */}
 
-      <Slider  {...settings}>
+      <Slider {...settings}>
         <div>
           <div className="shadow-md rounded p-5">
             <img className="rounded shadow w-full" src={sklis1} alt="" />

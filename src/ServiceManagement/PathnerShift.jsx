@@ -8,7 +8,7 @@ import sponser7 from "/src/images/sponser/4.png";
 
 const PathnerShift = () => {
   return (
-    <div className="max-w-6xl mx-auto text-center mt-20">
+    <div className="max-w-6xl px-4 md:px-0 mx-auto text-center mt-20">
       <p className="text-lg text-[#E91E63]">OUR PARTHNERS</p>
       <h1 className="text-4xl font-semibold mb-2">
         SPONSERS AND <span className="text-[#E91E63]">PARTHNERS</span>

@@ -23,17 +23,17 @@ const Conference = () => {
       </div>
       <div
         data-aos="fade-up"
-        className="mb-20 grid grid-cols-1  md:grid-cols-3 text-center mt-[-50px]"
+        className="mb-20 grid grid-cols-1  md:grid-cols-3 text-center  mt-[-50px]"
       >
-        <div className="bg-zinc-400 hover:bg-orange-500 shadow-md rounded-md p-6 w-60">
+        <div className="mb-5 bg-zinc-400 hover:bg-orange-500 shadow-md rounded-md p-6 w-60">
           <h1 className="text-3xl font-bold text-blue-700">Day-01</h1>
           <p className="mt-2 text-medium font-medium">2024, February 14</p>
         </div>
-        <div className="bg-zinc-400 hover:bg-orange-500 shadow-md rounded-md p-6 w-60">
+        <div className="mb-5 bg-zinc-400 hover:bg-orange-500 shadow-md rounded-md p-6 w-60">
           <h1 className="text-3xl font-bold text-blue-700">Day-02</h1>
           <p className="mt-2 text-medium font-medium">2024, February 19</p>
         </div>
-        <div className="bg-zinc-400 hover:bg-orange-500 shadow-md rounded-md p-6 w-60">
+        <div className="mb-5 bg-zinc-400 hover:bg-orange-500 shadow-md rounded-md p-6 w-60">
           <h1 className="text-3xl font-bold text-blue-700">Day-03</h1>
           <p className="mt-2 text-medium font-medium">2024, February 24</p>
         </div>
