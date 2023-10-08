@@ -1,10 +1,11 @@
 import { useContext, useState } from "react";
+import googleIcon from "/src/images/google-icon.png";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import swal from "sweetalert";
 
 const Register = () => {
-  const { userCreate } = useContext(AuthContext);
+  const { userCreate, googleSignIn } = useContext(AuthContext);
   const [errors, setErrors] = useState("");
   const [emailErr, setEmailErr] = useState('')
   const handleBtnRegister = (e) => {
@@ -40,6 +41,15 @@ const Register = () => {
         setEmailErr("Your email address has been used! ");
       });
   };
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+  .then(result => {
+    console.log(result.user)
+  })
+  .catch(error => {
+    console.log(error)
+  })
+}
   return (
     <div className="w-4/2">
       <div className="shadow w-[500px] p-5 rounded mx-auto mt-10 mb-10">
@@ -85,6 +95,12 @@ const Register = () => {
             value="Register"
           />
         </form>
+        <div className=" flex justify-center mt-5 cursor-pointer">
+          <div onClick={handleGoogleSignIn} className="w-2/3 flex items-center gap-5 border justify-between px-4 p-2 rounded-full shadow">
+            <img className="w-7" src={googleIcon} alt="" />
+            <h1 className="text-lg font-semibold">Continue With Google</h1>
+          </div>
+        </div>
         <div>
           <h1 className="mt-8 text-center">
             Do not have a account?{" "}
