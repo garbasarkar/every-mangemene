@@ -1,7 +1,14 @@
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 const Conference = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
     <div className="max-w-6xl mx-auto">
-      <div className="text-center pt-20 pb-28 bg-slate-50">
+      <div data-aos="fade-down" className="text-center pt-20 pb-28 bg-slate-50">
         <h1 className="text-4xl font-semibold">Event Schedule</h1>
         <div className="flex justify-center mt-3">
           <hr className="w-20  p-1 text-red-600" />
@@ -14,7 +21,10 @@ const Conference = () => {
           fugit consequuntur doloribus quo iusto?
         </p>
       </div>
-      <div className="mb-20 grid grid-cols-1  md:grid-cols-3 text-center mt-[-50px]">
+      <div
+        data-aos="fade-up"
+        className="mb-20 grid grid-cols-1  md:grid-cols-3 text-center mt-[-50px]"
+      >
         <div className="bg-zinc-400 hover:bg-orange-500 shadow-md rounded-md p-6 w-60">
           <h1 className="text-3xl font-bold text-blue-700">Day-01</h1>
           <p className="mt-2 text-medium font-medium">2024, February 14</p>

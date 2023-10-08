@@ -1,10 +1,17 @@
 import backim from "/src/images/sponser/conBk.avif";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Backfullimage = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
     <div className="mt-20 mb-20 relative opacity-60 w-full h-[500px] bg-[url('/src/images/sponser/conBk.avif')]">
       <div className="flex flex-col md:flex-row justify-between items-center gap-5 px-5">
-        <div className="flex-1">
+        <div data-aos="fade-right" className="flex-1">
           <h1 className="text-white text-4xl font-semibold">
             Biggest Business Meetup Get Your <br /> Business Idea!
           </h1>
@@ -17,7 +24,7 @@ const Backfullimage = () => {
             Read More..
           </button>
         </div>
-        <div className="flex-1  mt-10">
+        <div data-aos="fade-left" className="flex-1  mt-10">
           <div className=" p-8 w-2/3 shadow-md bg-white">
             <h1 className=" text-4xl font-semibold text-black">
               <span className="text-[#E91E63]">Get your seat</span> Now, There

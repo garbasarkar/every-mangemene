@@ -1,43 +1,42 @@
 [
-    {
-      "id": 1,
-      "title": "Tech Innovators Summit",
-      "image": "tech_innovators_summit.jpg"
-    },
-    {
-      "id": 2,
-      "title": "Global Business Conference",
-      "image": "global_business_conference.jpg"
-    },
-    {
-      "id": 3,
-      "title": "Healthcare Innovations Forum",
-      "image": "healthcare_innovations_forum.jpg"
-    },
-    {
-      "id": 4,
-      "title": "Sustainable Development Summit",
-      "image": "sustainable_development_summit.jpg"
-    },
-    {
-      "id": 5,
-      "title": "AI and Robotics Symposium",
-      "image": "ai_robotics_symposium.jpg"
-    },
-    {
-      "id": 6,
-      "title": "Leadership Excellence Conference",
-      "image": "leadership_excellence_conference.jpg"
-    },
-    {
-      "id": 7,
-      "title": "Future of Work Summit",
-      "image": "future_of_work_summit.jpg"
-    },
-    {
-      "id": 8,
-      "title": "Innovation in Education Forum",
-      "image": "innovation_in_education_forum.jpg"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "title": "Tech Innovators Summit",
+    "image": "https://i.ibb.co/xMzkBZS/download1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Global Business Conference",
+    "image": "https://i.ibb.co/bR0907Z/download2.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Healthcare Innovations Forum",
+    "image": "https://i.ibb.co/xMzkBZS/download1.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Sustainable Development Summit",
+    "image": "https://i.ibb.co/d2Fwdzg/download4.jpg"
+  },
+  {
+    "id": 5,
+    "title": "AI and Robotics Symposium",
+    "image": "https://i.ibb.co/wsq8y5q/download5.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Leadership Excellence Conference",
+    "image": "https://i.ibb.co/4Wh5gRs/download6.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Future of Work Summit",
+    "image": "https://i.ibb.co/kBpfXL1/images7.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Innovation in Education Forum",
+    "image": "https://i.ibb.co/ZNXjJKg/images8.jpg"
+  }
+]
