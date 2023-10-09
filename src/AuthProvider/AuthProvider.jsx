@@ -7,6 +7,7 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
+  updateProfile,
 } from "firebase/auth";
 
 export const AuthContext = createContext(null);
@@ -30,9 +31,14 @@ const AuthProvider = ({ children }) => {
     return signOut(auth);
   };
   const googleSignIn = () => {
-    return signInWithPopup(auth, googleProvider)
-  }
+    return signInWithPopup(auth, googleProvider);
+  };
 
+  const upDateProfile = (displayName, photoURL) => {
+    return updateProfile(auth.currentUser, {
+      displayName, photoURL
+    });
+  };
   useEffect(() => {
     const userFixed = onAuthStateChanged(auth, (currentUser) => {
       console.log("user in the auth state chance!", currentUser);
@@ -44,7 +50,15 @@ const AuthProvider = ({ children }) => {
     };
   }, []);
 
-  const authInfo = { user, loading, userCreate, userLogin, logOut , googleSignIn };
+  const authInfo = {
+    user,
+    loading,
+    userCreate,
+    userLogin,
+    logOut,
+    googleSignIn,
+    upDateProfile
+  };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
   );

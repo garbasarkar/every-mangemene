@@ -81,7 +81,19 @@ const Navbar = () => {
           </ul>
         </nav>
         <div className="flex mt-5 md:mt-0 gap-3 items-center mr-5">
-          <img className="w-10 rounded-full" src={profile} alt="" />
+          {/* <div> */}
+          {user ? (
+            <img
+              className="w-10 h-10 rounded-full"
+              src={user.photoURL}
+              alt=""
+            />
+          ) : (
+            <img className="w-10 h-10 rounded-full" src={profile} alt="" />
+          )}
+          {/* {user.photoURL && <img src={user.photoURL} ></img>} */}
+          {user && <p>{user.displayName}</p>}
+          {/* </div> */}
           {user ? (
             <button
               onClick={userLogOut}

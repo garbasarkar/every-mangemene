@@ -5,7 +5,7 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 import swal from "sweetalert";
 
 const Register = () => {
-  const { userCreate, googleSignIn } = useContext(AuthContext);
+  const { userCreate, googleSignIn, upDateProfile } = useContext(AuthContext);
   const [errors, setErrors] = useState("");
   const [emailErr, setEmailErr] = useState("");
   const handleBtnRegister = (e) => {
@@ -13,9 +13,10 @@ const Register = () => {
     // console.log(e.currentTarget);
     const fromIn = new FormData(e.currentTarget);
     const name = fromIn.get("name");
+    const photo = fromIn.get('photo')
     const email = fromIn.get("email");
     const password = fromIn.get("password");
-    console.log(name, email, password);
+    console.log(name, photo, email, password);
     setEmailErr("");
     setErrors("");
     if (password.length < 6) {
@@ -34,7 +35,10 @@ const Register = () => {
     userCreate(email, password)
       .then((result) => {
         console.log(result.user);
-        swal("Welcome!", "Success full Registeration!", "success");
+        upDateProfile(name, photo)
+        .then(() => {
+          swal("Welcome!", "Success full Registeration!", "success");
+        })
       })
       .catch((error) => {
         console.log(error);
@@ -65,6 +69,16 @@ const Register = () => {
             placeholder="Your Name"
             required
           />
+          <br />
+          <input
+            className="w-full border mt-3 py-2 px-2 rounded"
+            type="text"
+            name="photo"
+            id="photo"
+            placeholder="Photo URL"
+            required
+          />
+
           <br />
           <input
             className="w-full border mt-3 mb-3 py-2 px-2 rounded"
