@@ -20,9 +20,9 @@ const Navbar = () => {
   };
   return (
     <>
-      <div className=" md:w-10/12 mx-auto flex md:flex-row justify-between items-center">
+      <div className=" md:w-10/12 md:mb-5 mt-5 mx-auto flex md:flex-row justify-between items-center">
         <div
-          className="pl-5 md:hidden  text-2xl"
+          className="pl-5 lg:hidden  text-2xl"
           onClick={() => setOpen(!open)}
         >
           {open === true ? (
@@ -39,7 +39,7 @@ const Navbar = () => {
           <ul
             className={`bg-gray-400 p-5 md:flex duration-1000 absolute ${
               open ? "left-0 top-12" : "-top-60 left-0"
-            } md:static px-5 lg:bg-white  `}
+            } lg:static px-5 lg:bg-white  `}
           >
             <li>
               <NavLink className="ml-5 text-lg font-semibold" to="/home">
