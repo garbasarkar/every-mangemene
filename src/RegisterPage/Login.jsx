@@ -27,7 +27,7 @@ const Login = () => {
     userLogin(email, password)
       .then((result) => {
         console.log(result.user);
-        swal("Good job!", "Login Sucssesfull!", "success");
+        swal("Welcome!", "Login Sucssesfull!", "success");
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
@@ -45,8 +45,8 @@ const Login = () => {
       });
   };
   return (
-    <div className="w-4/2">
-      <div className="shadow w-[500px] p-5 rounded mx-auto mt-10 mb-10">
+    <div className="w-2/2 md:w-4/2">
+      <div className="shadow w-full md:w-[500px] p-5 rounded mx-auto mt-10 mb-10">
         <div className="w-full bg-[#EC5AA2] py-10 rounded shadow-md mb-5 text-center text-2xl font-semibold text-white">
           <h1>Login now!</h1>
         </div>
@@ -81,7 +81,7 @@ const Login = () => {
         <div className=" flex justify-center mt-5 cursor-pointer">
           <div
             onClick={handleGoogleSignIn}
-            className="w-2/3 flex items-center gap-5 border justify-between px-4 p-2 rounded-full shadow"
+            className="w-full md:w-2/3 flex items-center gap-5 border justify-between px-4 p-2 rounded-full shadow"
           >
             <img className="w-7" src={googleIcon} alt="" />
             <h1 className="text-lg font-semibold">Continue With Google</h1>

@@ -10,11 +10,13 @@ import Conference from "../PrivateRouterDesign/Conference";
 import ServicesPage from "../ServiceManagement/ServicesPage";
 import AboutPage from "../ServiceManagement/AboutPage";
 import HomePage from "../ServiceManagement/HomePage";
+import ErrorPage from "./ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Roots></Roots>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",

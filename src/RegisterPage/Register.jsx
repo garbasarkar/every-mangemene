@@ -7,7 +7,7 @@ import swal from "sweetalert";
 const Register = () => {
   const { userCreate, googleSignIn } = useContext(AuthContext);
   const [errors, setErrors] = useState("");
-  const [emailErr, setEmailErr] = useState('')
+  const [emailErr, setEmailErr] = useState("");
   const handleBtnRegister = (e) => {
     e.preventDefault();
     // console.log(e.currentTarget);
@@ -16,7 +16,7 @@ const Register = () => {
     const email = fromIn.get("email");
     const password = fromIn.get("password");
     console.log(name, email, password);
-    setEmailErr('');
+    setEmailErr("");
     setErrors("");
     if (password.length < 6) {
       setErrors("Password should be at least 6 characters or longer!");
@@ -34,7 +34,7 @@ const Register = () => {
     userCreate(email, password)
       .then((result) => {
         console.log(result.user);
-        swal("Good job!", "You clicked the button!", "success");
+        swal("Welcome!", "Success full Registeration!", "success");
       })
       .catch((error) => {
         console.log(error);
@@ -43,16 +43,16 @@ const Register = () => {
   };
   const handleGoogleSignIn = () => {
     googleSignIn()
-  .then(result => {
-    console.log(result.user)
-  })
-  .catch(error => {
-    console.log(error)
-  })
-}
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
-    <div className="w-4/2">
-      <div className="shadow w-[500px] p-5 rounded mx-auto mt-10 mb-10">
+    <div className="w-2/2 md:w-4/2">
+      <div className="shadow w-full md:w-[500px] p-5 rounded mx-auto mt-10 mb-10">
         <div className="w-full bg-[#EC5AA2] py-10 rounded shadow-md mb-5 text-center text-2xl font-semibold text-white">
           <h1>Register now!</h1>
         </div>
@@ -96,7 +96,10 @@ const Register = () => {
           />
         </form>
         <div className=" flex justify-center mt-5 cursor-pointer">
-          <div onClick={handleGoogleSignIn} className="w-2/3 flex items-center gap-5 border justify-between px-4 p-2 rounded-full shadow">
+          <div
+            onClick={handleGoogleSignIn}
+            className="w-full md:w-2/3 flex items-center gap-5 border justify-between px-4 p-2 rounded-full shadow"
+          >
             <img className="w-7" src={googleIcon} alt="" />
             <h1 className="text-lg font-semibold">Continue With Google</h1>
           </div>

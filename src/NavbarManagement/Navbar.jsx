@@ -38,7 +38,7 @@ const Navbar = () => {
         <nav>
           <ul
             className={`bg-gray-400 p-5 md:flex duration-1000 absolute ${
-              open ? "left-0 top-12" : "-top-60 left-0"
+              open ? "left-0 top-16" : "-top-60 left-0"
             } lg:static px-5 lg:bg-white  `}
           >
             <li>
